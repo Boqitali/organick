@@ -1,0 +1,156 @@
+.testimonial {
+  text-align: center;
+  padding: 100px 20px; // kattalashtirildi
+  background: url("../assets/background.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+
+  .subtitle {
+    color: #4b8b66;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 50px; // kattalashtirildi
+    font-weight: bold;
+    color: #1f3f53;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-content {
+    max-width: 700px;
+    margin: 0 auto 50px;
+
+    .user-photo {
+      width: 100px; // kattaroq rasm
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .stars {
+      color: #f6a700;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1f3f53;
+    }
+
+    .position {
+      font-size: 15px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    .dots {
+      margin-top: 12px;
+
+      span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+
+        &.active {
+          background-color: #4b8b66;
+        }
+      }
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 2px solid #eee;
+    padding-top: 40px;
+
+    .stat {
+      border: 2px solid #7EB693;
+      border-radius: 50%;
+      width: 211px;
+      height: 211px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 22px;
+        color: #1f3f53;
+        margin: 0;
+      }
+
+      p {
+        font-size: 18px;
+        color: #274C5B;
+        margin: 0;
+      }
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    padding: 80px 15px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .testimonial-content {
+      .message {
+        font-size: 15px;
+      }
+
+      .user-photo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .stars {
+        font-size: 18px;
+      }
+
+      .dots span {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .stats {
+      flex-direction: column;
+      align-items: center;
+
+      .stat {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

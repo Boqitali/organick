@@ -1,0 +1,158 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 6rem; 
+  background: #f9f9f9;
+  gap: 5rem;
+
+  &__image {
+    flex: 1;
+    img {
+      width: 100%;
+      max-width: 700px; 
+      border-radius: 12px;
+    }
+  }
+
+  &__content {
+    flex: 1.2;
+    max-width: none; 
+    width: 100%;
+
+    .about__subtitle {
+      color: #7eb693;
+      font-weight: bold;
+      font-size: 1.4rem; 
+      margin-bottom: 1.2rem;
+    }
+
+    .about__title {
+      font-size: 3.2rem; 
+      font-weight: 700;
+      color: #274c5b;
+      line-height: 1.4;
+      margin-bottom: 1.2rem;
+    }
+
+    .about__text {
+      color: #525c60;
+      font-size: 1.2rem; 
+      line-height: 1.9;
+      margin-bottom: 2.2rem;
+    }
+
+    .about__features {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+        &__icon img {
+          width: 60px; 
+          height: 60px;
+        }
+
+        &__title {
+          font-size: 1.6rem; 
+          font-weight: 600;
+          color: #274c5b;
+          margin-bottom: 0.6rem;
+        }
+
+        &__text {
+          font-size: 1.1rem;
+          color: #525c60;
+        }
+      }
+    }
+
+    button{
+        @include btn($bg-py, $bg-gold);
+        margin-top: 3rem;
+        box-shadow: 0 8px 18px rgba(39, 76, 91, 0.2);
+        color: white;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 5rem 3rem;
+
+    &__image, &__content {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__content {
+      .about__title {
+        font-size: 2.4rem;
+      }
+
+      .about__text {
+        font-size: 1rem;
+      }
+
+      .about__features {
+        .feature {
+          flex-direction: column;
+          align-items: flex-start;
+
+          &__icon img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 776px) {
+    padding: 4rem 2rem;
+
+    &__content {
+      .about__title {
+        font-size: 2rem;
+      }
+
+      .about__subtitle {
+        font-size: 1.2rem;
+      }
+
+      .about__text {
+        font-size: 0.95rem;
+      }
+
+      .about__features {
+        .feature {
+          padding: 1.4rem;
+          gap: 1.5rem;
+
+          &__title {
+            font-size: 1.4rem;
+          }
+
+          &__text {
+            font-size: 0.95rem;
+          }
+        }
+      }
+
+      button {
+        padding: 20px 36px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
